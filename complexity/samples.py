@@ -21,11 +21,11 @@ def sample6(n):
     pie = 3.14
     j = 1
     for var in range(n):
-        if j < var:     
+      if j < var:     
           sum+=1
           j*=2
-        else:
-          sum+=1
+      else:
+        sum+=1
     return sum
 
 for n in [1, 2, 4, 8, 16, 32]:
