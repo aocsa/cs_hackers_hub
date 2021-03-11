@@ -92,17 +92,6 @@ print(binary_search(arr, key=3))
 print(binary_search(arr, key=4))
 # %%
 
-def merge(left, right):
-  return []
-
-def msort(arr):
-  n = len(arr)
-  if n == 1:
-    return arr
-  mid = n // 2
-  left = arr[:mid]
-  right = arr[mid:]
-  return merge(msort(left), msort(right))
 
 # %%
 # def fib(n):
