@@ -20,6 +20,7 @@ func partition(arr []int) int {
 	x := arr[pivot_index]
 	// skip and increase j if  arr[j] > x and then swap
 	// i current less arr[i] <= x
+	// see this http://didawiki.cli.di.unipi.it/lib/exe/fetch.php/informatica/all-b/partition.pdf
 	for j := 1; j < len(arr); j++ {
 		if arr[j] <= x {
 			i += 1
