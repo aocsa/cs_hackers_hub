@@ -1,0 +1,10 @@
+# Default ignored files
+/rust/shelf/
+/rust/workspace.xml
+# Datasource local storage ignored files
+/rust/dataSources/
+/rust/dataSources.local.xml
+# Editor-based HTTP Client requests
+/rust/httpRequests/
+/rust/.idea/
+/rust/target/
