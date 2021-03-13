@@ -13,9 +13,10 @@ struct node {
 struct linked_list{
     std::unique_ptr<node> head;
     node* tail;
+    size_t size; 
 
     linked_list()
-        : head{nullptr}, tail{nullptr}
+        : head{nullptr}, tail{nullptr} ,size{0}
     {
     }
 
@@ -28,7 +29,23 @@ struct linked_list{
             this->head = std::move(new_tail);
         }
         this->tail = raw_tail;
+        this->size++;
     }
+
+    int remove_head() {
+        if (this->head) {
+            auto old_value = this->head->value;
+
+            auto new_head = std::move(this->head->next);
+            if (new_head == nullptr) {
+                this->tail = nullptr;
+            }
+            this->head = std::move(new_head);
+            this->size--;
+            return old_value;
+        }        
+    }
+
     void print() {
         auto node = this->head.get();
         while (node) {
@@ -41,11 +58,14 @@ struct linked_list{
 
 int main() {
     auto l = linked_list();
-    l.push_back(0);
-    l.push_back(1);
-    l.push_back(2);
-    l.push_back(3);
-
+    for (auto i = 0; i < 10; i++) {
+        l.push_back(i);
+    }
+    l.print();
+    while (l.size > 0) {
+        l.remove_head();
+        l.print();
+    }
     l.print();
     return 0;
 }
