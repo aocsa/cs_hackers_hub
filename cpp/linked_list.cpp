@@ -1,4 +1,5 @@
 #include <memory>
+#include <vector>
 #include <iostream>
 
 struct node {
@@ -56,10 +57,19 @@ struct linked_list{
     }
 };
 
+template<typename ADT, typename Pred>
+void generic_print(ADT ds, Pred pred) {
+    for(auto iter = ds.begin(); iter != ds.end(); iter++){
+        pred(*iter);
+    }
+}
+
 int main() {
     auto l = linked_list();
+    auto arr = std::vector<int>();
     for (auto i = 0; i < 10; i++) {
         l.push_back(i);
+        arr.push_back(i);
     }
     l.print();
     while (l.size > 0) {
@@ -67,5 +77,11 @@ int main() {
         l.print();
     }
     l.print();
+
+    std::cout << "functors >>>\n";
+    generic_print(arr, [](auto x) {
+        std::cout << x << ", ";
+    });
+    std::cout << "<<<\n";
     return 0;
 }
