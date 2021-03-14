@@ -1,6 +1,3 @@
-
-
-
 struct Node {
     value: i32,
     next: Option<Box<Node>> 
@@ -30,7 +27,7 @@ impl LinkedList {
         self.tail = Some(raw_tail);
     }
 
-    pub fn remove_head(&mut self) -> Option<i32> {
+    pub fn pop_back(&mut self) -> Option<i32> {
         if let Some(head) = &mut self.head {
             let old_value = Some(head.value);
             let new_head = head.next.take();
@@ -58,9 +55,9 @@ impl LinkedList {
 
 fn main() {
     let mut list = LinkedList::new();
-    list.insert(0);
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
-    list.print()
+    list.push_back(0);
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+    list.print();
 }
