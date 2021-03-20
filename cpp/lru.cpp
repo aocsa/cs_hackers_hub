@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <memory>
 
 using namespace std;
 
@@ -19,19 +20,19 @@ struct node{
 };
 
 struct List{
-    node* head;
-    node* tail;
+    std::unique_ptr<node> head;
+    std::unique_ptr<node> tail;
     int size;
     List() {
-        this->head = new node();
-        this->tail = new node();
-        this->head->next = tail;
-        this->tail->prev = head;
+        this->head = std::make_unique<node>();
+        this->tail = std::make_unique<node>();
+        this->head->next = tail.get();
+        this->tail->prev = head.get();
         this->size = 0;
     }
 
     void push_front(node *new_node){
-        insert(new_node, head, head->next);
+        insert(new_node, head.get(), head->next);
     }
 
     void insert(node *new_node, node* prev, node* curr) {
@@ -61,29 +62,27 @@ struct List{
 struct LRUCache {
 private: 
     // <string, node*>
-    unordered_map<string, node*> dicc;
-    List* list;
+    unordered_map<string, std::unique_ptr<node>> dicc;
+    List list;
     int size;
 
 public:
     LRUCache(int s) {
         this->size = s;
-        list = new List();
     }
     
     void insert(string key, int value) {
+        auto new_node = std::make_unique<node>(key, value);
         if (this->dicc.size() < this->size) {
             // case 1: insert
-            auto new_node = new node(key, value);
-            this->list->push_front(new_node); // O(1)
-            this->dicc[key] = new_node;
+            this->list.push_front(new_node.get()); // O(1)
+            this->dicc[key] = std::move(new_node);
         } else {
             // case 2: remove!
-            auto new_node = new node(key, value);
-            this->list->push_front(new_node); // O(1)
-            this->dicc[key] = new_node;
+            this->list.push_front(new_node.get()); // O(1)
+            this->dicc[key] = std::move(new_node);
 
-            auto old_node = this->list->remove_last(); // O(1)
+            node* old_node = this->list.remove_last(); // O(1)
             this->dicc.erase(old_node->key);
         }
         // assert(this->dicc.size() <= this->size);
@@ -91,16 +90,16 @@ public:
 
     int getValueFromKey(string key) {
         if (this->dicc.find(key) != this->dicc.end()) {
-            auto ptr = this->dicc[key];
-            this->list->remove_ref(ptr); // O(1)
-            this->list->push_front(ptr); // O(1)
-            return ptr->value;
+            auto weak_ptr = this->dicc[key].get();
+            this->list.remove_ref(weak_ptr); // O(1)
+            this->list.push_front(weak_ptr); // O(1)
+            return weak_ptr->value;
         }
         return -1;// null, optional<None>
     }
     string getMostRecentKey() {
         if (this->dicc.size() > 0) {
-            return this->list->first_key(); // O(1)
+            return this->list.first_key(); // O(1)
         }
         return "";
     }
@@ -119,6 +118,5 @@ int main() {
 	std::cout << lru.getValueFromKey("b") << endl; // None // "b" was evicted in the previous operation
 	lru.insert("a", 5); // "a" already exists in the cache so its valu
 	std::cout << lru.getValueFromKey("a") << endl; //: 5
-
     return 0;
 }
