@@ -7,7 +7,7 @@
 
 using namespace std;
 
-struct node{
+struct node {
     string key;
     int value; 
     node* next; 
