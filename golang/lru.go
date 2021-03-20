@@ -67,6 +67,15 @@ func (self *LinkedList) remove_node(ptr *Node) *Node {
 	return ptr
 }
 
+func (self *LinkedList) print() {
+	ptr := self.head.next
+	for ptr != self.tail {
+		fmt.Print("(", ptr.key, ", ", ptr.value, ")", "->")
+		ptr = ptr.next
+	}
+	fmt.Println()
+}
+
 type LRUCache struct {
 	heap *LinkedList
 	dicc map[string]*Node
@@ -83,14 +92,19 @@ func NewLRUCache(size int) *LRUCache {
 
 func (self *LRUCache) Insert(key string, value int) {
 	new_node := NewNode(key, value)
-	if len(self.dicc) < self.size {
-		self.heap.push_front(new_node)
-		self.dicc[key] = new_node
+	if ptr, ok := self.dicc[key]; ok {
+		self.GetValueFromKey(key)
+		ptr.value = value
 	} else {
-		self.heap.push_front(new_node)
-		self.dicc[key] = new_node
-		old_node := self.heap.remove_last()
-		delete(self.dicc, old_node.key)
+		if len(self.dicc) < self.size {
+			self.heap.push_front(new_node)
+			self.dicc[key] = new_node
+		} else {
+			self.heap.push_front(new_node)
+			self.dicc[key] = new_node
+			old_node := self.heap.remove_last()
+			delete(self.dicc, old_node.key)
+		}
 	}
 }
 
@@ -121,10 +135,17 @@ func main() {
 	if k, ok := cache.GetMostRecentKey(); ok { //// "c" was the most recently inserted key
 		fmt.Println(k)
 	}
+	cache.heap.print()
 	cache.GetValueFromKey("a") //: 1
 	cache.GetMostRecentKey()   // "a" // "a" was the most recently retrieved key
 	cache.Insert("d", 4)       // the cache had 3 entries; the least recently
+
+	cache.heap.print()
+
 	cache.GetValueFromKey("b") // None // "b" was evicted in the previous operation
-	cache.Insert("a", 5)       // "a" already exists in the cache so its valu
+
+	cache.Insert("a", 5) // "a" already exists in the cache so its valu
+	cache.heap.print()
+
 	cache.GetValueFromKey("a") //: 5*/
 }
