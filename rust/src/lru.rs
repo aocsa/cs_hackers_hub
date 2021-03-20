@@ -50,10 +50,21 @@ impl LinkedList{
             (*(*ptr).next.unwrap()).prev = (*ptr).prev;
         }
     }
+    fn remove_last(&mut self) {
+        return unsafe{
+            let mut last_node = self.tail.as_mut().prev.unwrap();
+            self.remove(last_node)
+        };
+    }
 
     fn first(&mut self) -> *const Node {
         return unsafe{
             self.head.as_mut().next.unwrap()
+        };
+    }
+    fn last(&mut self) -> *const Node {
+        return unsafe{
+            self.tail.as_mut().prev.unwrap()
         };
     }
 
@@ -97,12 +108,30 @@ impl LRUCache{
         let key_cp = key.to_string();
         let mut new_node = Box::new(Node { key:key, value:value, next: None, prev: None });
         let raw_new_node = &mut *new_node as *mut Node;
-        if self.dicc.len() < self.size {
-            self.heap.push_front(raw_new_node);
-            self.dicc.entry(key_cp).or_insert(Some(new_node));
+        let mut result = self.dicc.get_mut(&key_cp);
+        if result.is_some() {
+            unsafe {
+                let mut node_optional = result.as_mut().unwrap();
+                let mut node = node_optional.as_mut().unwrap();
+                let mut raw_node = node.as_mut();
+                raw_node.value = value;
+                self.getValueFromKey(key_cp);
+            };
         } else {
-            println!("erase case");
+            if self.dicc.len() < self.size {
+                self.heap.push_front(raw_new_node);
+                self.dicc.entry(key_cp).or_insert(Some(new_node));
+            } else {
+                unsafe{
+                    let old_key = (*self.heap.last()).key.to_string();
+                    self.heap.remove_last();
+                    self.dicc.remove(&old_key);
+                }
+                self.heap.push_front(raw_new_node);
+                self.dicc.entry(key_cp).or_insert(Some(new_node));
+            }
         }
+
     }
     fn getMostRecentKey(&mut self) -> String {
         if self.dicc.len() > 0 {
@@ -142,5 +171,10 @@ fn main() {
     cache.heap.print();
     println!("{}: ", cache.getMostRecentKey());
     println!("{}: ", cache.getValueFromKey("a".to_string()));
+    cache.heap.print();
+
+    cache.insert("d".to_string(), 4);
+    cache.heap.print();
+    cache.insert("a".to_string(), 5);
     cache.heap.print();
 }
