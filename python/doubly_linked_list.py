@@ -1,4 +1,5 @@
 # %%
+
 class Node:
     def __init__(self, value=None, prev=None, next=None):
         self.value = value
@@ -13,18 +14,18 @@ class DLList:
         self.head.next = self.tail
 
     def insert(self, value):
-        current = self.head.next
-        while current != self.tail and current.value < value:
-            current = current.next
-        new_node = Node(value, current.prev, current)
+        ptr = self.head.next
+        while ptr != self.tail and ptr.value < value:
+            ptr = ptr.next
+        new_node = Node(value, ptr.prev, ptr)
         new_node.prev.next = new_node
         new_node.next.prev = new_node
 
-    def print(self):
-        current = self.head.next
-        while current != self.tail:
-            print(current.value, ' ')
-            current = current.next
+    def print(self, reversed=False):
+        ptr = self.tail.prev if reversed else self.head.next
+        while ptr != (self.head if reversed else self.tail):
+            print(ptr.value, end=' ')
+            ptr = ptr.prev if reversed else ptr.next
 
 
 l = DLList()
@@ -34,6 +35,7 @@ l.insert(4)
 l.insert(2)
 l.insert(1)
 l.insert(6)
+print('From head to tail')
 l.print()
-
-# %%
+print('\nFrom tail to head')
+l.print(reversed=True)
