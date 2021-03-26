@@ -5,7 +5,7 @@ class Node:
         self.value = v
         self.next = None
         self.prev = None
- 
+
 
 class List: 
     def __init__(self):
