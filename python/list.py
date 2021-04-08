@@ -60,5 +60,3 @@ l.insert(3)
 l.print()
 l.insert(2)
 l.print()
-
-# %%

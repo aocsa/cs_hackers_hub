@@ -1,0 +1,152 @@
+[33mcommit 6ac703ef89023f4bf5cc0a021ca8f49a42fe5846[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Alexander oCSa <Alexander>
+Date:   Fri Mar 19 22:18:02 2021 -0500
+
+    x
+
+[33mcommit b7b7cc8912743ef4dec0b0bc59f52193ed19a5b6[m
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Fri Mar 19 21:08:43 2021 -0500
+
+    rust lru
+
+[33mcommit dfe8b939c264fdbaa88939a9322d92f226382ba8[m
+Merge: 44cf07a d37497a
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Fri Mar 19 19:23:52 2021 -0500
+
+    Merge branch 'main' of https://github.com/aocsa/cs_hackers_hub into main
+
+[33mcommit d37497ae3a9f5501577a47180586afc565f0e4e7[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Sat Mar 20 00:23:36 2021 +0000
+
+    s
+
+[33mcommit 44cf07a7b21c0e4b1505c54d2ea87103046c0e3c[m
+Merge: 93b191c 22a0a50
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Fri Mar 19 18:33:15 2021 -0500
+
+    Merge branch 'main' of https://github.com/aocsa/cs_hackers_hub into main
+
+[33mcommit 6014035e1e15d2e134ad581691b3075ea7049fcb[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Fri Mar 19 17:21:25 2021 +0000
+
+    lru with smart pointers
+
+[33mcommit 22a0a502fa605bd0691b32790dd35566fb9070ab[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Fri Mar 19 16:30:59 2021 +0000
+
+    lru in python i golang
+
+[33mcommit 93b191c5a03fa65166c0a918de8a82a8984ad863[m
+Merge: a3ab75c be774f6
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Fri Mar 19 10:07:48 2021 -0500
+
+    Merge branch 'main' of https://github.com/aocsa/cs_hackers_hub into main
+
+[33mcommit a3ab75c223e33fd8ff16c258024b678f9260b5a6[m
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Fri Mar 19 10:07:43 2021 -0500
+
+    minor update
+
+[33mcommit be774f666c80f026f772ba9516fb2aa02b496683[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Thu Mar 18 01:39:16 2021 +0000
+
+    lru in cpp
+
+[33mcommit 2ce4fcb610526088817a2802d9cfaf82c1f38ad4[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Sun Mar 14 17:24:21 2021 +0000
+
+    binary tree
+
+[33mcommit cfaa810041b3132b40e81b0fffb603e76a6a04af[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Sun Mar 14 17:23:56 2021 +0000
+
+    binary tree
+
+[33mcommit 501e1f7aba57ec91f1a9ebf765edd4cc533c6ed8[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Sat Mar 13 16:56:48 2021 +0000
+
+    cpp: linkedlist remove
+
+[33mcommit 1f3cb0b0b9f2eac82b756603397036b85bd3bc29[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Sat Mar 13 16:45:19 2021 +0000
+
+    linked lists in cpp, rust and go
+
+[33mcommit f10923b19fbb5f9477e872f97da1e83a089ed17a[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Sat Mar 13 15:32:05 2021 +0000
+
+    linked list
+
+[33mcommit e7ef8a45aa325d05ae10d39336ca80ec31643d4a[m
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Thu Mar 11 21:22:05 2021 -0500
+
+    update
+
+[33mcommit 5b53e7c909ffff3597982f8c50a66811be4862ff[m
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Thu Mar 11 21:17:36 2021 -0500
+
+    msort.go
+
+[33mcommit 647a1b521eb17d0418d190315748748b22da81ef[m
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Thu Mar 11 20:31:24 2021 -0500
+
+    add reference
+
+[33mcommit 699986dd44ae85fcb6888d4f8d9feac3b7d86de2[m
+Author: Alexander <aocsa.cs@gmail.com>
+Date:   Thu Mar 11 20:27:22 2021 -0500
+
+    lot of changes
+
+[33mcommit 9fe540237c1e417beb2e269128c29f32f741562f[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Thu Mar 11 03:13:17 2021 +0000
+
+    naive golang version of quick_sort
+
+[33mcommit a9f12c0e2da708b9114a9f1c727bcaa6a8755665[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Thu Mar 11 01:53:19 2021 +0000
+
+    merge, quick sort, and quick select
+
+[33mcommit e84543ec140dc85ee1b40e219d8831836ab23c1f[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Sat Mar 6 17:07:08 2021 +0000
+
+    divide and conquer
+
+[33mcommit fb19eee3dfc172d18b90599cabbc225db9e93be4[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Fri Mar 5 16:40:59 2021 +0000
+
+    minor update
+
+[33mcommit 224c024f46c546ee054edf3610c0caa88fc4bd81[m
+Author: Alexander Ocsa <aocsa.cs@gmail.com>
+Date:   Thu Mar 4 02:16:10 2021 +0000
+
+    sasamplesmples
+
+[33mcommit a05de9b53064dc92c3acf766bcbf2c182f62f748[m
+Author: Alexander Ocsa <aocsa@quansight.com>
+Date:   Wed Mar 3 18:24:20 2021 -0500
+
+    Initial commit
