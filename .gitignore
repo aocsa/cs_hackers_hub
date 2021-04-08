@@ -9,4 +9,5 @@
 /rust/.idea/
 /rust/target/
 
-/python/.idea/
+/python/.idea/*
+/.vscode/*
