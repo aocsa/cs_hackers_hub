@@ -10,4 +10,4 @@
 /rust/target/
 
 /python/.idea/*
-/.vscode/*
+.vscode/*
