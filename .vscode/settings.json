@@ -1,0 +1,30 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "map": "cpp",
+        "deque": "cpp",
+        "optional": "cpp",
+        "ostream": "cpp",
+        "system_error": "cpp",
+        "functional": "cpp",
+        "type_traits": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "list": "cpp",
+        "queue": "cpp",
+        "set": "cpp",
+        "xhash": "cpp",
+        "xlocnum": "cpp",
+        "xtree": "cpp",
+        "memory": "cpp"
+    },
+    "python.pythonPath": "/opt/conda/bin/python"
+}
