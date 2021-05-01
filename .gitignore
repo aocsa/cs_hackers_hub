@@ -11,3 +11,4 @@
 
 /python/.idea/*
 .vscode/*
+.vscode/settings.json
