@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/CUDACommunityMeetup2021" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/DemoCPP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/Gentleman.Dots" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/VTK" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/aocsa.github.io" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/aocsa/theseus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/apache/arrow" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/arrow" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/arrow-zig" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/bigger-than-gpu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/blazingsql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/btree" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/btree/build/_deps/googletest-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/btree/cmake-build-debug/_deps/googletest-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/btree_page_man" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/btree_page_man/build/_deps/googletest-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/btree_page_man/cmake-build-debug/_deps/googletest-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/ccia_code_samples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/concurrentqueue" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/coros" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/coros/build/_deps/googletest-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/coros/debug-build/_deps/googletest-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/cs_hackers_hub" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/flatbuffers-zig" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/gentleman-programming-book" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/how-query-engines-work" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/iejoin_cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/iterm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/lz4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/memory_pool_project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/mpi_join_cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/parquet_reader" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/quest_engine" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/quest_python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/sirius" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/terminal-configs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix/modules/cli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix/modules/core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix/modules/json" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix/modules/middleware" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix/modules/orm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix/modules/utils" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/vix/modules/websocket" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rust/whisper.cpp" vcs="Git" />
+  </component>
+</project>

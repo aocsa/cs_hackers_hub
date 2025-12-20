@@ -1,18 +1,18 @@
 struct Node {
     value: i32,
-    next: Option<Box<Node>> 
+    next: Option<Box<Node>>,
 }
 
 struct LinkedList {
     head: Option<Box<Node>>,
-    tail: Option<*mut Node>
+    tail: Option<*mut Node>,
 }
 
 impl LinkedList {
     fn new() -> Self {
-        LinkedList{
+        LinkedList {
             head: None,
-            tail: None
+            tail: None,
         }
     }
     fn push_back(&mut self, value: i32) {
@@ -41,11 +41,11 @@ impl LinkedList {
         }
     }
     fn print(&mut self) {
-        let mut node  = &self.head;
-        while let Some(old_node) = node  {
+        let mut node = &self.head;
+        while let Some(old_node) = node {
             match &node {
                 Some(node) => print!("{}", node.value),
-                _ => () ,
+                _ => (),
             }
             node = &old_node.next;
         }
@@ -53,7 +53,7 @@ impl LinkedList {
     }
 }
 
-fn main() {
+pub fn demo() {
     let mut list = LinkedList::new();
     list.push_back(0);
     list.push_back(1);

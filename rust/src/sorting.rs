@@ -1,10 +1,4 @@
-
-#[test]
-fn my_test() {
-    assert!(false);
-}
-
-fn partition(arr:&mut Vec<i32>, begin:usize, end:usize, pivot_index:usize) -> usize {
+fn partition(arr: &mut [i32], begin: usize, end: usize, pivot_index: usize) -> usize {
     arr.swap(begin, pivot_index);
     let x = arr[begin];
     let mut i = begin;
@@ -20,7 +14,7 @@ fn partition(arr:&mut Vec<i32>, begin:usize, end:usize, pivot_index:usize) -> us
     i
 }
 
-fn partition_arr(arr:&mut [i32], pivot_index:usize) -> usize {
+fn partition_arr(arr: &mut [i32], pivot_index: usize) -> usize {
     let begin = 0;
     let end = arr.len() - 1;
     arr.swap(begin, pivot_index);
@@ -38,11 +32,10 @@ fn partition_arr(arr:&mut [i32], pivot_index:usize) -> usize {
     i
 }
 
-
-fn quick_sort(arr:&mut Vec<i32>, begin: usize, end:usize){
+fn quick_sort(arr: &mut Vec<i32>, begin: usize, end: usize) {
     if begin < end {
         let pivot_index = begin; // rand(begin, end)
-        // println!("begin={} | end={} ", begin, end);
+                                 // println!("begin={} | end={} ", begin, end);
         let mid = partition(arr, begin, end, pivot_index);
         // println!("mid: {}", mid);
         if mid > 0 {
@@ -52,7 +45,7 @@ fn quick_sort(arr:&mut Vec<i32>, begin: usize, end:usize){
     }
 }
 
-fn quick_select(arr:&mut Vec<i32>, begin:usize, end:usize, k:usize) -> i32 {
+fn quick_select(arr: &mut Vec<i32>, begin: usize, end: usize, k: usize) -> i32 {
     if begin == end {
         return arr[begin];
     }
@@ -60,7 +53,7 @@ fn quick_select(arr:&mut Vec<i32>, begin:usize, end:usize, k:usize) -> i32 {
     let pivot_index = begin; // rand(begin, end)
     let mid = partition(arr, begin, end, pivot_index);
     if mid == k {
-        return arr[k]
+        return arr[k];
     }
     if k < mid {
         return quick_select(arr, begin, mid - 1, k);
@@ -69,12 +62,12 @@ fn quick_select(arr:&mut Vec<i32>, begin:usize, end:usize, k:usize) -> i32 {
     }
 }
 
-fn quick_sort_arr(arr:&mut [i32]) {
+fn quick_sort_arr(arr: &mut [i32]) {
     if arr.len() > 0 {
         let pivot_index = 0; // rand(begin, end)
         let mid = partition_arr(&mut arr[..], pivot_index);
         quick_sort_arr(&mut arr[..mid]);
-        quick_sort_arr(&mut arr[mid+1..]);
+        quick_sort_arr(&mut arr[mid + 1..]);
     }
 }
 
@@ -82,7 +75,7 @@ fn greet(x: String) {
     println!("Hello to  {}", x);
 }
 
-fn main() {
+pub fn demo() {
     let my_greeting = "Hello world!".to_string();
     greet(my_greeting);
     // let mut out: Vec<u64> = Vec::new();
@@ -100,5 +93,5 @@ fn main() {
 
     let mut arr_2 = vec![5, 7, 2, 9, 1];
     quick_sort_arr(&mut arr_2);
-    print!("sorted_arr: {:?}", arr_2);
+    println!("sorted_arr: {:?}", arr_2);
 }
